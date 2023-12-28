@@ -1,33 +1,31 @@
 .main-body{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+    /* display: flex;
+    flex-direction: row; */
+    width: 100vw;
     height: 95vh;
     overflow-y: auto;
+    position: relative;
 }
 
 .nav-bar{
-    width:0px;
+    position: absolute;
+    left: -11vw;
+    top: 0px;
+    width:11vw;
     min-height: 100%;
     background-color: #fff;
-    padding: 0 10px;
     box-shadow: var(--elevation-03);
     transition: all 0.3s ease;
-    overflow: hidden;
-}
-
-.nav-bar.expanded{
-    width: 11vw;
-}
-
-.menu.expanded{
-    left: 10.5vw;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .body{
-    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
     height: 100%;
-    border: 1px solid red;
     transition: all 0.3s ease;
 }
 
@@ -43,11 +41,26 @@
     height: 2.5vw;
     border-radius: 50%;
     transition: all 0.3s ease;
+    z-index: 1;
 }
 
 .menu i{
     font-size: 16px;
 }
+
+.nav-bar.expanded{
+    left: 0px;
+}
+
+.menu.expanded{
+    left: 10.5vw;
+}
+
+.body.expanded{
+    left: 11vw;
+    width: calc(100vw - 11vw);
+}
+
 
 /* @media screen and (max-width: 600px) {
     .main-body{
@@ -58,3 +71,69 @@
         min-height: 100%;
     }
 } */
+
+.nav-profile{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--elevation-03);
+}
+
+.nav-profile .content{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.nav-profile .content img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+} 
+
+
+.nav-lists ul li{
+    width: 11vw;
+    height: 40px;
+    border-radius:0 10px 10px 0;
+    transition: all 0.2s ease;
+}
+
+.nav-lists ul li:hover{
+    background-color: var(--btn-color);
+}
+
+.nav-lists ul li a{
+    width: 100%;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+
+.active{
+    background-color: var(--btn-color);
+}
+
+.nav-footer{
+    position: absolute;
+    bottom: 0px;
+    width: 11vw;
+}
+
+.nav-footer .content a{
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+}

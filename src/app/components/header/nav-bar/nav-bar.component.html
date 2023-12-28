@@ -3,12 +3,25 @@
         <i class="fa-solid" [ngClass]="isExpanded ? 'fa-xmark': 'fa-bars'"></i>
     </div>
     <div class="nav-bar" [ngClass]="isExpanded ? 'expanded' : ''">
-        <div class="nav-content" [ngClass]="isExpanded ? 'expanded' : ''">
-            <div class="profile">
-                <div class="content">
-                    <img src="" alt="">
-                    <span>Welcome Prashanth</span>
-                </div>
+        <div class="nav-profile">
+            <div class="content">
+                <img src="assets\images\download.png" alt="">
+                <span>Welcome Prashanth</span>
+            </div>
+        </div>
+        <div class="nav-lists">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Career</a></li>
+                <li><a href="">Setting</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Order Details</a></li>
+            </ul>
+        </div>
+        <div class="nav-footer">
+            <div class="content">
+                <a href="">Logout <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
             </div>
         </div>
     </div>
