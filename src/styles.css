@@ -19,7 +19,8 @@
     --elevation-23: 0px 11px 14px -7px rgba(0, 0, 0, 0.2), 0px 23px 36px 3px rgba(0, 0, 0, 0.14), 0px 9px 44px 8px rgba(0, 0, 0, 0.12);
     --normal-shadow: var(--elevation-01);
     --hover-shadow: var(--elevation-05);
-    --focus-shadow: var(--elevation-05)
+    --focus-shadow: var(--elevation-05);
+    --body-color: #e3fafc;
 }   
 
 *{
@@ -35,6 +36,7 @@ html{
 
 body{
     width: 100%;
+    background-color: var(--body-color);
 }
 
 .flex{
