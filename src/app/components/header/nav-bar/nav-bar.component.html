@@ -1,1 +1,18 @@
-<p>nav-bar works!</p>
+<div class="main-body">
+    <div class="menu" (click)="isExpanded = !isExpanded" [ngClass]="isExpanded ? 'expanded' : ''">
+        <i class="fa-solid" [ngClass]="isExpanded ? 'fa-xmark': 'fa-bars'"></i>
+    </div>
+    <div class="nav-bar" [ngClass]="isExpanded ? 'expanded' : ''">
+        <div class="nav-content" [ngClass]="isExpanded ? 'expanded' : ''">
+            <div class="profile">
+                <div class="content">
+                    <img src="" alt="">
+                    <span>Welcome Prashanth</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body" [ngClass]="isExpanded ? 'expanded' : ''">
+        <router-outlet></router-outlet>
+    </div>
+</div>

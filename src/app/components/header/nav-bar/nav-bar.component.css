@@ -1,5 +1,60 @@
-.nav-bar{
+.main-body{
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    height: 6.6vh;
-    
+    height: 95vh;
+    overflow-y: auto;
 }
+
+.nav-bar{
+    width:0px;
+    min-height: 100%;
+    background-color: #fff;
+    padding: 0 10px;
+    box-shadow: var(--elevation-03);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.nav-bar.expanded{
+    width: 11vw;
+}
+
+.menu.expanded{
+    left: 10.5vw;
+}
+
+.body{
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+    transition: all 0.3s ease;
+}
+
+.menu{
+    position: fixed;
+    left: 2px;
+    top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--btn-color);
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.menu i{
+    font-size: 16px;
+}
+
+/* @media screen and (max-width: 600px) {
+    .main-body{
+        flex-direction: row;
+    }
+    .nav-bar{
+        max-width: 100px;
+        min-height: 100%;
+    }
+} */

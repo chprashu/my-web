@@ -21,6 +21,7 @@
     --hover-shadow: var(--elevation-05);
     --focus-shadow: var(--elevation-05);
     --body-color: #e3fafc;
+    --btn-color:#66d9e8;
 }   
 
 *{
